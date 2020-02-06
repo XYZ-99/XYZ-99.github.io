@@ -1947,19 +1947,20 @@ table tr td {
     border: 2px solid #ccc;
     text-align: left;
     margin: 0;
-    padding: 6px 13px
+    padding: 6px 13px;
 }
 
 table tr td:first-child,table tr th:first-child {
-    margin-top: 0
+    margin-top: 0;
 }
 
 table tr td:last-child,table tr th:last-child {
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 table.highlighttable{
     margin: .8em 0;
+    display: block;
 }
 
 table.highlighttable tr td {
@@ -1967,7 +1968,7 @@ table.highlighttable tr td {
 }
 
 td.linenos{
-    padding: 0;
+    padding: 0 4px;
     text-align: center;
     background-color: #202020;
 }
@@ -1979,11 +1980,12 @@ td.linenos{
 
 td.code{
     padding: 0;
+    width: 100%;
 }
 
-.code pre{
-    padding: 0;
+td.code pre{
     margin: 0;
+    border-radius: 0;
 }
 
 /* google search box */

@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <base target="_blank" />
+
+  <title>  Git Command Manual | XYZ
+</title>
+  <link rel="canonical" href="https://XYZ-99.github.io/git.html">
+
+    <link rel="apple-touch-icon" href="https://XYZ-99.github.io/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="https://XYZ-99.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://XYZ-99.github.io/images/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="https://XYZ-99.github.io/manifest.json">
+    <meta name="theme-color" content="#333333">
+
+  <link rel="stylesheet" href="https://XYZ-99.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://XYZ-99.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://XYZ-99.github.io/theme/css/pygments/monokai.min.css">
+  <link rel="stylesheet" href="https://XYZ-99.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://XYZ-99.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="Full RSS Feed"
+        href="https://XYZ-99.github.io/feeds/all.rss.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://XYZ-99.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="Your git manual.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a target="_self" href="https://XYZ-99.github.io/">
+        <img class="img-fluid rounded" src=https://XYZ-99.github.io/images/profile.png  width=200 height=200 alt="XYZ">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a target="_self" href="https://XYZ-99.github.io/">XYZ</a></h1>
+      <p class="text-muted">So desperate to learn.</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a target="_self" href="https://XYZ-99.github.io/pages/about.html">About</a></li>
+      </ul>
+        <!-- <script async src="https://cse.google.com/cse.js?cx=011315378015336732565:5pluxdmz0ww"></script>
+        <div class="gcse-search"></div>  -->
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Git Command Manual
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2019-08-13T11:33:00+08:00">
+          <i class="fa fa-clock-o"></i>
+          Tue 13 August 2019
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://XYZ-99.github.io/category/notes.html">Notes</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://XYZ-99.github.io/tag/git.html">#Git</a>,               <a href="https://XYZ-99.github.io/tag/zsh.html">#zsh</a>,               <a href="https://XYZ-99.github.io/tag/github.html">#GitHub</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <h2>一、本地操作：</h2>
+<hr />
+
+<h3>1. 其它</h3>
+<p><code>git init</code>：初始化本地库</p>
+<p><code>git status</code>：查看工作区、暂存区的状态</p>
+<p><code>git add &lt;file name&gt;</code>：将工作区的“新建/修改”添加到暂存区</p>
+<p><code>git rm --cached &lt;file name&gt;</code>：移除暂存区的修改</p>
+<p><code>git commit &lt;file name&gt;</code>：将暂存区的内容提交到本地库</p>
+<blockquote>
+<p><strong>Tip</strong>：需要再编辑提交日志，比较麻烦，建议用下面带参数的提交方法</p>
+</blockquote>
+<p><code>git commit -m "提交日志" &lt;file name&gt;</code>：文件从暂存区到本地库  </p>
+<p><br /></p>
+<h3>2. 日志</h3>
+<p><code>git log</code>：查看历史提交</p>
+<blockquote>
+<p>tip：空格向下翻页，b向上翻页，q退出</p>
+</blockquote>
+<p><code>git log --pretty=oneline</code>：以漂亮的一行显示，包含全部哈希索引值</p>
+<p><code>git log --oneline</code>：以简洁的一行显示，包含简洁哈希索引值</p>
+<p><code>git reflog</code>：以简洁的一行显示，包含简洁哈希索引值，同时显示移动到某个历史版本所需的步数  </p>
+<p><br /></p>
+<h3>3. 版本控制</h3>
+<p><code>git reset --hard 简洁/完整哈希索引值</code>：回到指定哈希值所对应的版本</p>
+<p><code>git reset --hard HEAD</code>：强制工作区、暂存区、本地库为当前HEAD指针所在的版本</p>
+<p><code>git reset --hard HEAD^</code>：后退一个版本　　</p>
+<blockquote>
+<p><strong>Tip</strong>：一个 ^ 表示回退一个版本</p>
+</blockquote>
+<p><code>git reset --hard HEAD~1</code>：后退一个版本</p>
+<blockquote>
+<p><strong>Tip</strong>：波浪线 ~ 后面的数字表示后退几个版本  </p>
+</blockquote>
+<p><br /></p>
+<h3>4. 比较差异</h3>
+<p><code>git diff</code>：比较工作区和暂存区的所有文件差异</p>
+<p><code>git diff &lt;file name&gt;</code>：比较工作区和暂存区的指定文件的差异</p>
+<p><code>git diff HEAD|HEAD^|HEAD~|哈希索引值 &lt;file name&gt;</code>：比较工作区跟本地库的某个版本的指定文件的差异  </p>
+<p><br /></p>
+<h3>5. 分支操作</h3>
+<p><code>git branch -v</code>：查看所有分支</p>
+<p><code>git branch -d &lt;分支名&gt;</code>：删除本地分支</p>
+<p><code>git branch &lt;分支名&gt;</code>：新建分支</p>
+<p><code>git checkout &lt;分支名&gt;</code>：切换分支</p>
+<p><code>git merge &lt;被合并分支名&gt;</code>：合并分支</p>
+<blockquote>
+<p><strong>Tip</strong>：如master分支合并 hot_fix分支，那么当前必须处于master分支上，然后执行 git merge hot_fix 命令</p>
+<p><strong>Tip</strong>：合并出现冲突：<br>
+① 删除git自动标记符号，如&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD、&gt;&gt;&gt;&gt;&gt;&gt;&gt;等<br>
+② 修改到满意后，保存退出<br>
+③ <code>git add &lt;file name&gt;</code><br>
+④ <code>git commit -m "日志信息"</code>，此时后面不要带文件名    </p>
+</blockquote>
+<p><br /></p>
+<h2>二、本地库跟远程库交互：</h2>
+<hr />
+
+<p><code>git clone &lt;远程库地址&gt;</code>：克隆远程库</p>
+<blockquote>
+<p><strong>功能</strong>：①完整的克隆远程库为本地库，②为本地库新建 origin 别名，③初始化本地库</p>
+</blockquote>
+<p><code>git remote -v</code>：查看远程库地址别名</p>
+<p><code>git remote add &lt;别名&gt; &lt;远程库地址&gt;</code>：新建远程库地址别名</p>
+<p><code>git remote rm &lt;别名&gt;</code>：删除本地中远程库别名</p>
+<p><code>git push &lt;别名&gt; &lt;分支名&gt;</code>：本地库某个分支推送到远程库，分支必须指定</p>
+<p><code>git pull &lt;别名&gt; &lt;分支名&gt;</code>：把远程库的修改拉取到本地</p>
+<blockquote>
+<p><strong>Tip</strong>：该命令包括 git fetch，git merge</p>
+</blockquote>
+<p><code>git fetch &lt;远程库别名&gt; &lt;远程库分支名&gt;</code>：抓取远程库的指定分支到本地，但没有合并</p>
+<p><code>git merge &lt;远程库别名/远程库分支名&gt;</code>：将抓取下来的远程的分支，跟当前所在分支进行合并</p>
+<p><code>git fork</code>：复制远程库</p>
+<blockquote>
+<p><strong>Tip</strong>：一般是外面团队的开发人员 fork 本团队项目，然后进行开发，之后外面团队发起pull request，然后本团队进行审核，如无问题本团队进行 merge（合并）到团队自己的远程库，整个流程就是本团队跟外面团队的协同开发流程，Linux的团队开发成员即为这种工作方式。  </p>
+</blockquote>
+<p><br /></p>
+<hr>
+<ul>
+<li>2019.12.13 Update.</li>
+</ul>
+<h3>关于 zsh</h3>
+<p>对于 zsh 里面的 git 插件，可以在 <code>~/.oh-my-zsh/plugins/git/git.plugin.zsh</code> 里面查看：</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nb">alias</span> <span class="nv">g</span><span class="o">=</span><span class="s1">&#39;git&#39;</span>
+
+<span class="nb">alias</span> <span class="nv">ga</span><span class="o">=</span><span class="s1">&#39;git add&#39;</span>
+<span class="nb">alias</span> <span class="nv">gaa</span><span class="o">=</span><span class="s1">&#39;git add --all&#39;</span>
+<span class="nb">alias</span> <span class="nv">gapa</span><span class="o">=</span><span class="s1">&#39;git add --patch&#39;</span>
+<span class="nb">alias</span> <span class="nv">gau</span><span class="o">=</span><span class="s1">&#39;git add --update&#39;</span>
+<span class="nb">alias</span> <span class="nv">gav</span><span class="o">=</span><span class="s1">&#39;git add --verbose&#39;</span>
+<span class="nb">alias</span> <span class="nv">gap</span><span class="o">=</span><span class="s1">&#39;git apply&#39;</span>
+
+<span class="nb">alias</span> <span class="nv">gb</span><span class="o">=</span><span class="s1">&#39;git branch&#39;</span>
+<span class="nb">alias</span> <span class="nv">gba</span><span class="o">=</span><span class="s1">&#39;git branch -a&#39;</span>
+<span class="nb">alias</span> <span class="nv">gbd</span><span class="o">=</span><span class="s1">&#39;git branch -d&#39;</span>
+<span class="nb">alias</span> <span class="nv">gbda</span><span class="o">=</span><span class="s1">&#39;git branch --no-color --merged | command grep -vE &quot;^(\+|\*|\s*(master|develop|dev)\s*$)&quot; | command xargs -n 1 git branch -d&#39;</span>
+<span class="nb">alias</span> <span class="nv">gbD</span><span class="o">=</span><span class="s1">&#39;git branch -D&#39;</span>
+<span class="nb">alias</span> <span class="nv">gbl</span><span class="o">=</span><span class="s1">&#39;git blame -b -w&#39;</span>
+<span class="nb">alias</span> <span class="nv">gbnm</span><span class="o">=</span><span class="s1">&#39;git branch --no-merged&#39;</span>
+<span class="nb">alias</span> <span class="nv">gbr</span><span class="o">=</span><span class="s1">&#39;git branch --remote&#39;</span>
+<span class="nb">alias</span> <span class="nv">gbs</span><span class="o">=</span><span class="s1">&#39;git bisect&#39;</span>
+<span class="nb">alias</span> <span class="nv">gbsb</span><span class="o">=</span><span class="s1">&#39;git bisect bad&#39;</span>
+<span class="nb">alias</span> <span class="nv">gbsg</span><span class="o">=</span><span class="s1">&#39;git bisect good&#39;</span>
+<span class="nb">alias</span> <span class="nv">gbsr</span><span class="o">=</span><span class="s1">&#39;git bisect reset&#39;</span>
+<span class="nb">alias</span> <span class="nv">gbss</span><span class="o">=</span><span class="s1">&#39;git bisect start&#39;</span>
+
+<span class="nb">alias</span> <span class="nv">gc</span><span class="o">=</span><span class="s1">&#39;git commit -v&#39;</span>
+<span class="nb">alias</span> gc!<span class="o">=</span><span class="s1">&#39;git commit -v --amend&#39;</span>
+<span class="nb">alias</span> gcn!<span class="o">=</span><span class="s1">&#39;git commit -v --no-edit --amend&#39;</span>
+<span class="nb">alias</span> <span class="nv">gca</span><span class="o">=</span><span class="s1">&#39;git commit -v -a&#39;</span>
+<span class="nb">alias</span> gca!<span class="o">=</span><span class="s1">&#39;git commit -v -a --amend&#39;</span>
+<span class="nb">alias</span> gcan!<span class="o">=</span><span class="s1">&#39;git commit -v -a --no-edit --amend&#39;</span>
+<span class="nb">alias</span> gcans!<span class="o">=</span><span class="s1">&#39;git commit -v -a -s --no-edit --amend&#39;</span>
+<span class="nb">alias</span> <span class="nv">gcam</span><span class="o">=</span><span class="s1">&#39;git commit -a -m&#39;</span>
+<span class="nb">alias</span> <span class="nv">gcsm</span><span class="o">=</span><span class="s1">&#39;git commit -s -m&#39;</span>
+<span class="nb">alias</span> <span class="nv">gcb</span><span class="o">=</span><span class="s1">&#39;git checkout -b&#39;</span>
+<span class="nb">alias</span> <span class="nv">gcf</span><span class="o">=</span><span class="s1">&#39;git config --list&#39;</span>
+<span class="nb">alias</span> <span class="nv">gcl</span><span class="o">=</span><span class="s1">&#39;git clone --recurse-submodules&#39;</span>
+<span class="nb">alias</span> <span class="nv">gclean</span><span class="o">=</span><span class="s1">&#39;git clean -id&#39;</span>
+<span class="nb">alias</span> <span class="nv">gpristine</span><span class="o">=</span><span class="s1">&#39;git reset --hard &amp;&amp; git clean -dfx&#39;</span>
+<span class="nb">alias</span> <span class="nv">gcm</span><span class="o">=</span><span class="s1">&#39;git checkout master&#39;</span>
+<span class="nb">alias</span> <span class="nv">gcd</span><span class="o">=</span><span class="s1">&#39;git checkout develop&#39;</span>
+<span class="nb">alias</span> <span class="nv">gcmsg</span><span class="o">=</span><span class="s1">&#39;git commit -m&#39;</span>
+<span class="nb">alias</span> <span class="nv">gco</span><span class="o">=</span><span class="s1">&#39;git checkout&#39;</span>
+<span class="nb">alias</span> <span class="nv">gcount</span><span class="o">=</span><span class="s1">&#39;git shortlog -sn&#39;</span>
+<span class="nb">alias</span> <span class="nv">gcp</span><span class="o">=</span><span class="s1">&#39;git cherry-pick&#39;</span>
+<span class="nb">alias</span> <span class="nv">gcpa</span><span class="o">=</span><span class="s1">&#39;git cherry-pick --abort&#39;</span>
+<span class="nb">alias</span> <span class="nv">gcpc</span><span class="o">=</span><span class="s1">&#39;git cherry-pick --continue&#39;</span>
+<span class="nb">alias</span> <span class="nv">gcs</span><span class="o">=</span><span class="s1">&#39;git commit -S&#39;</span>
+
+<span class="nb">alias</span> <span class="nv">gd</span><span class="o">=</span><span class="s1">&#39;git diff&#39;</span>
+<span class="nb">alias</span> <span class="nv">gdca</span><span class="o">=</span><span class="s1">&#39;git diff --cached&#39;</span>
+<span class="nb">alias</span> <span class="nv">gdcw</span><span class="o">=</span><span class="s1">&#39;git diff --cached --word-diff&#39;</span>
+<span class="nb">alias</span> <span class="nv">gdct</span><span class="o">=</span><span class="s1">&#39;git describe --tags $(git rev-list --tags --max-count=1)&#39;</span>
+<span class="nb">alias</span> <span class="nv">gds</span><span class="o">=</span><span class="s1">&#39;git diff --staged&#39;</span>
+<span class="nb">alias</span> <span class="nv">gdt</span><span class="o">=</span><span class="s1">&#39;git diff-tree --no-commit-id --name-only -r&#39;</span>
+<span class="nb">alias</span> <span class="nv">gdw</span><span class="o">=</span><span class="s1">&#39;git diff --word-diff&#39;</span>
+
+<span class="k">function</span> gdv<span class="o">()</span> <span class="o">{</span> git diff -w <span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span> <span class="p">|</span> view - <span class="o">}</span>
+compdef _git <span class="nv">gdv</span><span class="o">=</span>git-diff
+
+<span class="nb">alias</span> <span class="nv">gf</span><span class="o">=</span><span class="s1">&#39;git fetch&#39;</span>
+<span class="nb">alias</span> <span class="nv">gfa</span><span class="o">=</span><span class="s1">&#39;git fetch --all --prune&#39;</span>
+<span class="nb">alias</span> <span class="nv">gfo</span><span class="o">=</span><span class="s1">&#39;git fetch origin&#39;</span>
+
+<span class="nb">alias</span> <span class="nv">gfg</span><span class="o">=</span><span class="s1">&#39;git ls-files | grep&#39;</span>
+
+<span class="nb">alias</span> <span class="nv">gg</span><span class="o">=</span><span class="s1">&#39;git gui citool&#39;</span>
+<span class="nb">alias</span> <span class="nv">gga</span><span class="o">=</span><span class="s1">&#39;git gui citool --amend&#39;</span>
+
+<span class="nb">alias</span> <span class="nv">ggpur</span><span class="o">=</span><span class="s1">&#39;ggu&#39;</span>
+<span class="nb">alias</span> <span class="nv">ggpull</span><span class="o">=</span><span class="s1">&#39;git pull origin &quot;$(git_current_branch)&quot;&#39;</span>
+<span class="nb">alias</span> <span class="nv">ggpush</span><span class="o">=</span><span class="s1">&#39;git push origin &quot;$(git_current_branch)&quot;&#39;</span>
+
+<span class="nb">alias</span> <span class="nv">ggsup</span><span class="o">=</span><span class="s1">&#39;git branch --set-upstream-to=origin/$(git_current_branch)&#39;</span>
+<span class="nb">alias</span> <span class="nv">gpsup</span><span class="o">=</span><span class="s1">&#39;git push --set-upstream origin $(git_current_branch)&#39;</span>
+
+<span class="nb">alias</span> <span class="nv">ghh</span><span class="o">=</span><span class="s1">&#39;git help&#39;</span>
+
+<span class="nb">alias</span> <span class="nv">gignore</span><span class="o">=</span><span class="s1">&#39;git update-index --assume-unchanged&#39;</span>
+<span class="nb">alias</span> <span class="nv">gignored</span><span class="o">=</span><span class="s1">&#39;git ls-files -v | grep &quot;^[[:lower:]]&quot;&#39;</span>
+<span class="nb">alias</span> git-svn-dcommit-push<span class="o">=</span><span class="s1">&#39;git svn dcommit &amp;&amp; git push github master:svntrunk&#39;</span>
+
+<span class="nb">alias</span> <span class="nv">gk</span><span class="o">=</span><span class="s1">&#39;\gitk --all --branches&#39;</span>
+<span class="nb">alias</span> <span class="nv">gke</span><span class="o">=</span><span class="s1">&#39;\gitk --all $(git log -g --pretty=%h)&#39;</span>
+
+<span class="nb">alias</span> <span class="nv">gl</span><span class="o">=</span><span class="s1">&#39;git pull&#39;</span>
+<span class="nb">alias</span> <span class="nv">glg</span><span class="o">=</span><span class="s1">&#39;git log --stat&#39;</span>
+<span class="nb">alias</span> <span class="nv">glgp</span><span class="o">=</span><span class="s1">&#39;git log --stat -p&#39;</span>
+<span class="nb">alias</span> <span class="nv">glgg</span><span class="o">=</span><span class="s1">&#39;git log --graph&#39;</span>
+<span class="nb">alias</span> <span class="nv">glgga</span><span class="o">=</span><span class="s1">&#39;git log --graph --decorate --all&#39;</span>
+<span class="nb">alias</span> <span class="nv">glgm</span><span class="o">=</span><span class="s1">&#39;git log --graph --max-count=10&#39;</span>
+<span class="nb">alias</span> <span class="nv">glo</span><span class="o">=</span><span class="s1">&#39;git log --oneline --decorate&#39;</span>
+<span class="nb">alias</span> <span class="nv">glol</span><span class="o">=</span><span class="s2">&quot;git log --graph --pretty=&#39;%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39;&quot;</span>
+<span class="nb">alias</span> <span class="nv">glols</span><span class="o">=</span><span class="s2">&quot;git log --graph --pretty=&#39;%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39; --stat&quot;</span>
+<span class="nb">alias</span> <span class="nv">glod</span><span class="o">=</span><span class="s2">&quot;git log --graph --pretty=&#39;%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)&lt;%an&gt;%Creset&#39;&quot;</span>
+<span class="nb">alias</span> <span class="nv">glods</span><span class="o">=</span><span class="s2">&quot;git log --graph --pretty=&#39;%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)&lt;%an&gt;%Creset&#39; --date=short&quot;</span>
+<span class="nb">alias</span> <span class="nv">glola</span><span class="o">=</span><span class="s2">&quot;git log --graph --pretty=&#39;%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39; --all&quot;</span>
+<span class="nb">alias</span> <span class="nv">glog</span><span class="o">=</span><span class="s1">&#39;git log --oneline --decorate --graph&#39;</span>
+<span class="nb">alias</span> <span class="nv">gloga</span><span class="o">=</span><span class="s1">&#39;git log --oneline --decorate --graph --all&#39;</span>
+<span class="nb">alias</span> <span class="nv">glp</span><span class="o">=</span><span class="s2">&quot;_git_log_prettily&quot;</span>
+
+<span class="nb">alias</span> <span class="nv">gm</span><span class="o">=</span><span class="s1">&#39;git merge&#39;</span>
+<span class="nb">alias</span> <span class="nv">gmom</span><span class="o">=</span><span class="s1">&#39;git merge origin/master&#39;</span>
+<span class="nb">alias</span> <span class="nv">gmt</span><span class="o">=</span><span class="s1">&#39;git mergetool --no-prompt&#39;</span>
+<span class="nb">alias</span> <span class="nv">gmtvim</span><span class="o">=</span><span class="s1">&#39;git mergetool --no-prompt --tool=vimdiff&#39;</span>
+<span class="nb">alias</span> <span class="nv">gmum</span><span class="o">=</span><span class="s1">&#39;git merge upstream/master&#39;</span>
+<span class="nb">alias</span> <span class="nv">gma</span><span class="o">=</span><span class="s1">&#39;git merge --abort&#39;</span>
+
+<span class="nb">alias</span> <span class="nv">gp</span><span class="o">=</span><span class="s1">&#39;git push&#39;</span>
+<span class="nb">alias</span> <span class="nv">gpd</span><span class="o">=</span><span class="s1">&#39;git push --dry-run&#39;</span>
+<span class="nb">alias</span> <span class="nv">gpf</span><span class="o">=</span><span class="s1">&#39;git push --force-with-lease&#39;</span>
+<span class="nb">alias</span> gpf!<span class="o">=</span><span class="s1">&#39;git push --force&#39;</span>
+<span class="nb">alias</span> <span class="nv">gpoat</span><span class="o">=</span><span class="s1">&#39;git push origin --all &amp;&amp; git push origin --tags&#39;</span>
+<span class="nb">alias</span> <span class="nv">gpu</span><span class="o">=</span><span class="s1">&#39;git push upstream&#39;</span>
+<span class="nb">alias</span> <span class="nv">gpv</span><span class="o">=</span><span class="s1">&#39;git push -v&#39;</span>
+
+<span class="nb">alias</span> <span class="nv">gr</span><span class="o">=</span><span class="s1">&#39;git remote&#39;</span>
+<span class="nb">alias</span> <span class="nv">gra</span><span class="o">=</span><span class="s1">&#39;git remote add&#39;</span>
+<span class="nb">alias</span> <span class="nv">grb</span><span class="o">=</span><span class="s1">&#39;git rebase&#39;</span>
+<span class="nb">alias</span> <span class="nv">grba</span><span class="o">=</span><span class="s1">&#39;git rebase --abort&#39;</span>
+<span class="nb">alias</span> <span class="nv">grbc</span><span class="o">=</span><span class="s1">&#39;git rebase --continue&#39;</span>
+<span class="nb">alias</span> <span class="nv">grbd</span><span class="o">=</span><span class="s1">&#39;git rebase develop&#39;</span>
+<span class="nb">alias</span> <span class="nv">grbi</span><span class="o">=</span><span class="s1">&#39;git rebase -i&#39;</span>
+<span class="nb">alias</span> <span class="nv">grbm</span><span class="o">=</span><span class="s1">&#39;git rebase master&#39;</span>
+<span class="nb">alias</span> <span class="nv">grbs</span><span class="o">=</span><span class="s1">&#39;git rebase --skip&#39;</span>
+<span class="nb">alias</span> <span class="nv">grev</span><span class="o">=</span><span class="s1">&#39;git revert&#39;</span>
+<span class="nb">alias</span> <span class="nv">grh</span><span class="o">=</span><span class="s1">&#39;git reset&#39;</span>
+<span class="nb">alias</span> <span class="nv">grhh</span><span class="o">=</span><span class="s1">&#39;git reset --hard&#39;</span>
+<span class="nb">alias</span> <span class="nv">groh</span><span class="o">=</span><span class="s1">&#39;git reset origin/$(git_current_branch) --hard&#39;</span>
+<span class="nb">alias</span> <span class="nv">grm</span><span class="o">=</span><span class="s1">&#39;git rm&#39;</span>
+<span class="nb">alias</span> <span class="nv">grmc</span><span class="o">=</span><span class="s1">&#39;git rm --cached&#39;</span>
+<span class="nb">alias</span> <span class="nv">grmv</span><span class="o">=</span><span class="s1">&#39;git remote rename&#39;</span>
+<span class="nb">alias</span> <span class="nv">grrm</span><span class="o">=</span><span class="s1">&#39;git remote remove&#39;</span>
+<span class="nb">alias</span> <span class="nv">grs</span><span class="o">=</span><span class="s1">&#39;git restore&#39;</span>
+<span class="nb">alias</span> <span class="nv">grset</span><span class="o">=</span><span class="s1">&#39;git remote set-url&#39;</span>
+<span class="nb">alias</span> <span class="nv">grss</span><span class="o">=</span><span class="s1">&#39;git restore --source&#39;</span>
+<span class="nb">alias</span> <span class="nv">grt</span><span class="o">=</span><span class="s1">&#39;cd &quot;$(git rev-parse --show-toplevel || echo .)&quot;&#39;</span>
+<span class="nb">alias</span> <span class="nv">gru</span><span class="o">=</span><span class="s1">&#39;git reset --&#39;</span>
+<span class="nb">alias</span> <span class="nv">grup</span><span class="o">=</span><span class="s1">&#39;git remote update&#39;</span>
+<span class="nb">alias</span> <span class="nv">grv</span><span class="o">=</span><span class="s1">&#39;git remote -v&#39;</span>
+
+<span class="nb">alias</span> <span class="nv">gsb</span><span class="o">=</span><span class="s1">&#39;git status -sb&#39;</span>
+<span class="nb">alias</span> <span class="nv">gsd</span><span class="o">=</span><span class="s1">&#39;git svn dcommit&#39;</span>
+<span class="nb">alias</span> <span class="nv">gsh</span><span class="o">=</span><span class="s1">&#39;git show&#39;</span>
+<span class="nb">alias</span> <span class="nv">gsi</span><span class="o">=</span><span class="s1">&#39;git submodule init&#39;</span>
+<span class="nb">alias</span> <span class="nv">gsps</span><span class="o">=</span><span class="s1">&#39;git show --pretty=short --show-signature&#39;</span>
+<span class="nb">alias</span> <span class="nv">gsr</span><span class="o">=</span><span class="s1">&#39;git svn rebase&#39;</span>
+<span class="nb">alias</span> <span class="nv">gss</span><span class="o">=</span><span class="s1">&#39;git status -s&#39;</span>
+<span class="nb">alias</span> <span class="nv">gst</span><span class="o">=</span><span class="s1">&#39;git status&#39;</span>
+
+<span class="c1"># use the default stash push on git 2.13 and newer</span>
+autoload -Uz is-at-least
+is-at-least <span class="m">2</span>.13 <span class="s2">&quot;</span><span class="k">$(</span>git --version <span class="m">2</span>&gt;/dev/null <span class="p">|</span> awk <span class="s1">&#39;{print $3}&#39;</span><span class="k">)</span><span class="s2">&quot;</span> <span class="se">\</span>
+  <span class="o">&amp;&amp;</span> <span class="nb">alias</span> <span class="nv">gsta</span><span class="o">=</span><span class="s1">&#39;git stash push&#39;</span> <span class="se">\</span>
+  <span class="o">||</span> <span class="nb">alias</span> <span class="nv">gsta</span><span class="o">=</span><span class="s1">&#39;git stash save&#39;</span>
+
+<span class="nb">alias</span> <span class="nv">gstaa</span><span class="o">=</span><span class="s1">&#39;git stash apply&#39;</span>
+<span class="nb">alias</span> <span class="nv">gstc</span><span class="o">=</span><span class="s1">&#39;git stash clear&#39;</span>
+<span class="nb">alias</span> <span class="nv">gstd</span><span class="o">=</span><span class="s1">&#39;git stash drop&#39;</span>
+<span class="nb">alias</span> <span class="nv">gstl</span><span class="o">=</span><span class="s1">&#39;git stash list&#39;</span>
+<span class="nb">alias</span> <span class="nv">gstp</span><span class="o">=</span><span class="s1">&#39;git stash pop&#39;</span>
+<span class="nb">alias</span> <span class="nv">gsts</span><span class="o">=</span><span class="s1">&#39;git stash show --text&#39;</span>
+<span class="nb">alias</span> <span class="nv">gstall</span><span class="o">=</span><span class="s1">&#39;git stash --all&#39;</span>
+<span class="nb">alias</span> <span class="nv">gsu</span><span class="o">=</span><span class="s1">&#39;git submodule update&#39;</span>
+<span class="nb">alias</span> <span class="nv">gsw</span><span class="o">=</span><span class="s1">&#39;git switch&#39;</span>
+<span class="nb">alias</span> <span class="nv">gswc</span><span class="o">=</span><span class="s1">&#39;git switch -c&#39;</span>
+
+<span class="nb">alias</span> <span class="nv">gts</span><span class="o">=</span><span class="s1">&#39;git tag -s&#39;</span>
+<span class="nb">alias</span> <span class="nv">gtv</span><span class="o">=</span><span class="s1">&#39;git tag | sort -V&#39;</span>
+<span class="nb">alias</span> <span class="nv">gtl</span><span class="o">=</span><span class="s1">&#39;gtl(){ git tag --sort=-v:refname -n -l &quot;${1}*&quot; }; noglob gtl&#39;</span>
+
+<span class="nb">alias</span> <span class="nv">gunignore</span><span class="o">=</span><span class="s1">&#39;git update-index --no-assume-unchanged&#39;</span>
+<span class="nb">alias</span> <span class="nv">gunwip</span><span class="o">=</span><span class="s1">&#39;git log -n 1 | grep -q -c &quot;\-\-wip\-\-&quot; &amp;&amp; git reset HEAD~1&#39;</span>
+<span class="nb">alias</span> <span class="nv">gup</span><span class="o">=</span><span class="s1">&#39;git pull --rebase&#39;</span>
+<span class="nb">alias</span> <span class="nv">gupv</span><span class="o">=</span><span class="s1">&#39;git pull --rebase -v&#39;</span>
+<span class="nb">alias</span> <span class="nv">gupa</span><span class="o">=</span><span class="s1">&#39;git pull --rebase --autostash&#39;</span>
+<span class="nb">alias</span> <span class="nv">gupav</span><span class="o">=</span><span class="s1">&#39;git pull --rebase --autostash -v&#39;</span>
+<span class="nb">alias</span> <span class="nv">glum</span><span class="o">=</span><span class="s1">&#39;git pull upstream master&#39;</span>
+
+<span class="nb">alias</span> <span class="nv">gwch</span><span class="o">=</span><span class="s1">&#39;git whatchanged -p --abbrev-commit --pretty=medium&#39;</span>
+<span class="nb">alias</span> <span class="nv">gwip</span><span class="o">=</span><span class="s1">&#39;git add -A; git rm $(git ls-files --deleted) 2&gt; /dev/null; git commit --no-verify --no-gpg-sign -m &quot;--wip-- [skip ci]&quot;&#39;</span>
+</pre></div>
+</td></tr></table>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a target="_self" href="https://XYZ-99.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a target="_self" href="https://XYZ-99.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a target="_self" href="https://XYZ-99.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Proudly Presented by XYZ.
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>
