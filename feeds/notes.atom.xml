@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>XYZ</title><link>https://XYZ-99.github.io/</link><description>So desperate to learn.</description><lastBuildDate>Sat, 04 Aug 2018 12:06:00 +0800</lastBuildDate><item><title>Regular Expression Notes</title><link>https://XYZ-99.github.io/regex.html</link><description>&lt;h2&gt;元字符&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>XYZ - Notes</title><link href="https://XYZ-99.github.io/" rel="alternate"></link><link href="https://XYZ-99.github.io/feeds/notes.atom.xml" rel="self"></link><id>https://XYZ-99.github.io/</id><updated>2018-08-04T12:06:00+08:00</updated><subtitle>So desperate to learn.</subtitle><entry><title>Regular Expression Notes</title><link href="https://XYZ-99.github.io/regex.html" rel="alternate"></link><published>2018-08-04T12:06:00+08:00</published><updated>2018-08-04T12:06:00+08:00</updated><author><name>XYZ</name></author><id>tag:xyz-99.github.io,2018-08-04:/regex.html</id><summary type="html">&lt;p&gt;Might be of some use for those who want to learn RegEx.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;元字符&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -480,4 +480,4 @@ $$&lt;/div&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">XYZ</dc:creator><pubDate>Sat, 04 Aug 2018 12:06:00 +0800</pubDate><guid isPermaLink="false">tag:xyz-99.github.io,2018-08-04:/regex.html</guid><category>RegEx</category></item></channel></rss>
+&lt;/script&gt;</content><category term="RegEx"></category></entry></feed>

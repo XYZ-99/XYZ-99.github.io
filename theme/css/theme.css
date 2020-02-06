@@ -12,14 +12,22 @@ a {
   color: #333;
 }
 
-a:focus,
-a:hover {
+a:hover{
   color: #0085a1;
 }
 
+a:active{
+  color: #2ac8e7;
+}
+
 blockquote {
-  color: #818a91;
+  margin: .8em 0;
+  color: #282a2e;
   font-style: italic;
+  border-left: 4px solid #333;
+  padding: 10px 15px !important;
+  background-color: #f1f1f1;
+  border-radius: 4px;
 }
 
 hr {
@@ -102,6 +110,22 @@ hr {
 
 .article .content a {
   text-decoration: underline
+}
+
+.article .content a:link{
+  color: #555555;
+}
+
+.article .content a:visited{
+  color: #a8a8a869;
+}
+
+.article .content a:hover{
+  color: #0085a1;
+}
+
+.article .content a:active{
+  color: #2ac8e7;
 }
 
 @media (min-width: 576px) {

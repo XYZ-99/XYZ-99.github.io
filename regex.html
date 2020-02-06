@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Regular Expression Notes | XYZ
+</title>
+  <link rel="canonical" href="https://XYZ-99.github.io/regex.html">
+
+
+  <link rel="stylesheet" href="https://XYZ-99.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://XYZ-99.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://XYZ-99.github.io/theme/css/pygments/monokai.min.css">
+  <link rel="stylesheet" href="https://XYZ-99.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://XYZ-99.github.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="Full RSS Feed"
+        href="https://XYZ-99.github.io/feeds/all.rss.xml">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://XYZ-99.github.io/feeds/{slug}.atom.xml">  
+  <meta name="description" content="Might be of some use for those who want to learn RegEx.">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://XYZ-99.github.io/">
+        <img class="img-fluid rounded" src=https://XYZ-99.github.io/images/profile.png width=200 height=200 alt="XYZ">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://XYZ-99.github.io/">XYZ</a></h1>
+      <p class="text-muted">So desperate to learn.</p>
+      <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://XYZ-99.github.io/pages/about.html">About</a></li>
+      </ul>
+        <!-- <script async src="https://cse.google.com/cse.js?cx=011315378015336732565:5pluxdmz0ww"></script>
+        <div class="gcse-search"></div>  -->
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Regular Expression Notes
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2018-08-04T12:06:00+08:00">
+          <i class="fa fa-clock-o"></i>
+          Sat 04 August 2018
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://XYZ-99.github.io/category/notes.html">Notes</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://XYZ-99.github.io/tag/regex.html">#RegEx</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <h2>元字符</h2>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.</code></td>
+<td>匹配除换行符以外的任意字符</td>
+</tr>
+<tr>
+<td><code>\w</code></td>
+<td>匹配字母或数字或下划线或汉字</td>
+</tr>
+<tr>
+<td><code>\s</code></td>
+<td>匹配任意的空白符</td>
+</tr>
+<tr>
+<td><code>\d</code></td>
+<td>匹配数字</td>
+</tr>
+<tr>
+<td><code>\b</code></td>
+<td>匹配单词的开始或结束</td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>匹配字符串的开始</td>
+</tr>
+<tr>
+<td><code>$</code></td>
+<td>匹配字符串的结束</td>
+</tr>
+</tbody>
+</table>
+<div class="math">$$
+f(x)=x^2
+$$</div>
+<hr>
+<h2>重复匹配</h2>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\d{2}</code></td>
+<td>匹配两次</td>
+</tr>
+<tr>
+<td><code>\d{1,3}</code></td>
+<td>匹配1到3次，<strong>闭区间</strong></td>
+</tr>
+<tr>
+<td><code>\d{2,}</code></td>
+<td>匹配2次或更多</td>
+</tr>
+<tr>
+<td><code>\d*</code></td>
+<td>匹配0次或更多次</td>
+</tr>
+<tr>
+<td><code>\d+</code></td>
+<td>匹配1次或更多次</td>
+</tr>
+<tr>
+<td><code>\d?</code></td>
+<td>匹配0或1次</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>字符转义</h2>
+<p>想要查找上述元字符本身（比如查找<code>.</code>），即可用<code>\.</code>。</p>
+<hr>
+<h2>字符集合</h2>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[aeiou]</code></td>
+<td>匹配其中任意<u><strong>一个</strong></u>字符</td>
+</tr>
+<tr>
+<td><code>[.?!]</code></td>
+<td>（自行领会）</td>
+</tr>
+<tr>
+<td><code>[0-9]</code></td>
+<td>（自行领会）</td>
+</tr>
+<tr>
+<td><code>[a-z0-9A-Z]</code></td>
+<td>（自行领会）</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>分支条件</h2>
+<p>使用 <code>|</code> 来进行分支条件，与「或」的意思很像。
+<strong>但需要注意的是</strong>，因为和「或」一样，匹配完前一个符合之后就不再匹配后一个了。也就是说，需要<u><strong>注意顺序</strong></u>。</p>
+<p>例如，如果要匹配美国的邮政编码（5位数字，或5位数字-4位数字），必须写成：
+<code>\d{5}-\d{4}|\d{5}</code>
+不能交换顺序。</p>
+<hr>
+<h2>分组</h2>
+<p>将一个单位重复好几次时，就可以用分组，比如匹配一个形如 <code>168.105.86.10</code> 的 IP 地址：
+<code>(\d{1,3}\.){3}\d{1,3}</code></p>
+<p>但是 IP 地址中每个数字都不能大于 255，所以还是要用更复杂的分组表达式进行匹配：  </p>
+<div class="highlight"><pre><span></span>((25[0-5]|2[0-4]\d|[01]?\d\d?).){3}25[0-5]|2[0-4]\d|[01]?\d\d?
+</pre></div>
+
+
+<ul>
+<li>注意一下这里匹配 200 以下数字的方法（因为可能是三位数，两位数和一位数，但百位有要求</li>
+</ul>
+<hr>
+<h2>反义</h2>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\W</code></td>
+<td>匹配除了字母或数字或下划线或汉字的字符</td>
+</tr>
+<tr>
+<td><code>\S</code></td>
+<td>匹配任意非空白符</td>
+</tr>
+<tr>
+<td><code>\D</code></td>
+<td>匹配非数字</td>
+</tr>
+<tr>
+<td><code>\B</code></td>
+<td>匹配非单词的开始或结束</td>
+</tr>
+<tr>
+<td><code>[^x]</code></td>
+<td>匹配除了 <code>x</code> 以外的字符</td>
+</tr>
+<tr>
+<td><code>[^aeiou]</code></td>
+<td>匹配除了 <code>aeiou</code> 以外的字符</td>
+</tr>
+</tbody>
+</table>
+<p>例子：  </p>
+<ol>
+<li><code>\S+</code> 匹配不包含空白符的字符串；</li>
+<li><code>&lt;a[^&gt;]+&gt;</code> 就可以匹配形如 <code>&lt;aeiou&gt;</code> 的字符串。<u><strong>以后匹配的时候要注意这个！</strong></u></li>
+</ol>
+<hr>
+<h2>后向引用</h2>
+<blockquote>
+<p>使用小括号指定一个子表达式后，匹配这个子表达式的文本(也就是此分组捕获的内容)可以在表达式或其它程序中作进一步的处理。默认情况下，每个分组会自动拥有一个组号，规则是：<strong>从左向右</strong>，以分组的<strong>左括号</strong>为标志，第一个出现的分组的组号为1，第二个为2，以此类推。</p>
+</blockquote>
+<p>用 <code>\1</code> 来表示第一组分组文本：<code>\b(\w+)\b\s\1\b</code> 可以匹配 <code>my my</code> 这种字符串。</p>
+<p>当然也可以自定义组名，用 <code>(?&lt;Word&gt;\w+)</code> 或 <code>(?'Word'\w+)</code> 的语法，之后用 <code>\k&lt;Word&gt;</code> 来指代。</p>
+<blockquote>
+<p>其实组号的分配要从左至右扫描两遍，第一遍只给<strong>未命名</strong>组分配组号，第二遍只给<strong>已命名组</strong>分配组号，因此所有已命名组的组号都大于未命名组的组号。  </p>
+</blockquote>
+<p>顺便看一下常用分组语法：  </p>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>表达式</th>
+<th>匹配</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>捕获</td>
+<td><code>exp</code></td>
+<td>通常</td>
+</tr>
+<tr>
+<td>捕获</td>
+<td><code>(?&lt;name&gt;exp)</code></td>
+<td>命名</td>
+</tr>
+<tr>
+<td>捕获</td>
+<td><code>(?:exp)</code></td>
+<td>不分配组名</td>
+</tr>
+<tr>
+<td>零宽断言</td>
+<td><code>(?=exp)</code></td>
+<td>匹配 <code>exp</code> 前面的文本</td>
+</tr>
+<tr>
+<td>零宽断言</td>
+<td><code>(?&lt;=exp)</code></td>
+<td>匹配 <code>exp</code> 后面的文本</td>
+</tr>
+<tr>
+<td>零宽断言</td>
+<td><code>(?!exp)</code></td>
+<td>匹配后面不是 <code>exp</code> 的文本</td>
+</tr>
+<tr>
+<td>零宽断言</td>
+<td><code>(?&lt;!exp)</code></td>
+<td>匹配前面不是<code>exp</code>的文本</td>
+</tr>
+<tr>
+<td>注释</td>
+<td><code>(?#comment)</code></td>
+<td>注释</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>零宽断言</h2>
+<p>语法见上。附上两个名词：<strong>零宽度正预测先行断言、零宽度正回顾后发断言</strong>。</p>
+<p>例1：<code>\b\w+(?=ing\b)</code> 匹配以 ing 结尾的单词。<br>
+例2：<code>\b(?&lt;=\bre)\w+\b</code> 匹配任何以 re 开头的单词。<br>
+例3：<code>((?&lt;=\d)\d{3})+\b</code> 查找为任意一个数字添加三位分隔符的位置。<br>
+例4：<code>(?&lt;=\s)\d+(?=\s)</code> 匹配以空格间隔的数字。→ 如果变成 <code>\s\d+\s</code>会怎么样？  </p>
+<hr>
+<h2>负向零宽断言</h2>
+<p>语法见上表。</p>
+<p>例1：<code>\b\w*q(?!u)\w*\b</code> 匹配含 <code>q</code> 且 <code>q</code> 后面不是 <code>u</code> 的单词。<br>
+例2：<code>\b((?!abc)\w)+\b</code> 匹配不包含 <code>abc</code> 的单词。<br>
+例3：<code>(?&lt;![a-z])\d{7}</code> 匹配前面非小写字母的 7 位数字。<br>
+例4：<code>(?&lt;=&lt;(\w+)&gt;).*(?=&lt;\/\1&gt;)</code> 匹配例如 <code>&lt;u&gt;</code> 和 <code>&lt;/u&gt;</code> 之间的内容（<strong>不包含</strong>）。  </p>
+<hr>
+<h2>注释</h2>
+<p>上面提到了使用 <code>(?#comment)</code> 可以添加注释。如果当启用了忽略表达式中的空格与 <code>tab</code> 键后，一行中 <code>#</code> 后面的文字都将被当作注释。</p>
+<div class="highlight"><pre><span></span>(?&lt;=    # 断言要匹配的文本的前缀
+&lt;(\w+)&gt; # 查找尖括号括起来的字母或数字(即HTML/XML标签)
+)       # 前缀结束
+.*      # 匹配任意文本
+(?=     # 断言要匹配的文本的后缀
+&lt;\/\1&gt;  # 查找尖括号括起来的内容：前面是一个&quot;/&quot;，后面是先前捕获的标签
+)       # 后缀结束
+</pre></div>
+
+
+<hr>
+<h2>贪婪与懒惰</h2>
+<p><strong>贪婪匹配：</strong>相同情况下，正则表达式会匹配到满足条件的最大字符串。<br>
+这时我们需要懒惰匹配，只需在对应位置加上 <code>?</code> ：<br>
+<code>a.*b</code> → <code>a.*?b</code></p>
+<p>支持以下语法：  </p>
+<ul>
+<li><code>*?</code></li>
+<li><code>+?</code></li>
+<li><code>??</code></li>
+<li><code>{m,n}?</code></li>
+<li><code>{n,}?</code></li>
+</ul>
+<p>重复固定次数的就用不着了。</p>
+<hr>
+<h2>平衡组与递归匹配</h2>
+<p>如何把 <code>xx &lt;aa &lt;bbb&gt; &lt;bbb&gt; aa&gt; yy</code> 中最长的对应的尖括号匹配出来？</p>
+<div class="highlight"><pre><span></span>&lt;                         #最外层的左括号
+    [^&lt;&gt;]*                #最外层的左括号后面的不是括号的内容
+    (
+        (
+            (?&#39;Open&#39;&lt;)    #碰到了左括号，在黑板上写一个&quot;Open&quot;
+            [^&lt;&gt;]*       #匹配左括号后面的不是括号的内容
+        )+
+        (
+            (?&#39;-Open&#39;&gt;)   #碰到了右括号，擦掉一个&quot;Open&quot;
+            [^&lt;&gt;]*        #匹配右括号后面不是括号的内容
+        )+
+    )*
+    (?(Open)(?!))         #在遇到最外层的右括号前面，判断黑板上还有没有没擦掉的&quot;Open&quot;；如果还有，则匹配失败
+
+&gt;                         #最外层的右括号
+</pre></div>
+
+
+<ul>
+<li><code>(?'group')</code> 把捕获的内容命名为 <code>group</code>，并压入堆栈(Stack)</li>
+<li><code>(?'-group')</code> 从堆栈上弹出最后压入堆栈的名为 <code>group</code> 的捕获内容，如果堆栈本来为空，则本分组的匹配失败</li>
+<li><code>(?(group)yes|no)</code> 如果堆栈上存在以名为 <code>group</code> 的捕获内容的话，继续匹配 <code>yes</code> 部分的表达式，否则继续匹配 <code>no</code> 部分</li>
+<li><code>(?!)</code> 零宽负向先行断言，由于没有后缀表达式，试图匹配总是失败</li>
+</ul>
+<hr>
+<h2>其他</h2>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\a</code></td>
+<td>报警字符(打印它的效果是电脑嘀一声)</td>
+</tr>
+<tr>
+<td><code>\b</code></td>
+<td>通常是单词分界位置，但如果在字符类里使用代表退格</td>
+</tr>
+<tr>
+<td><code>\t</code></td>
+<td>制表符，Tab</td>
+</tr>
+<tr>
+<td><code>\r</code></td>
+<td>回车</td>
+</tr>
+<tr>
+<td><code>\v</code></td>
+<td>竖向制表符</td>
+</tr>
+<tr>
+<td><code>\f</code></td>
+<td>换页符</td>
+</tr>
+<tr>
+<td><code>\n</code></td>
+<td>换行符</td>
+</tr>
+<tr>
+<td><code>\e</code></td>
+<td>Escape</td>
+</tr>
+<tr>
+<td><code>\0nn</code></td>
+<td>ASCII代码中八进制代码为nn的字符</td>
+</tr>
+<tr>
+<td><code>\xnn</code></td>
+<td>ASCII代码中十六进制代码为nn的字符</td>
+</tr>
+<tr>
+<td><code>\unnnn</code></td>
+<td>Unicode代码中十六进制代码为nnnn的字符</td>
+</tr>
+<tr>
+<td><code>\cN</code></td>
+<td>ASCII控制字符。比如\cC代表Ctrl+C</td>
+</tr>
+<tr>
+<td><code>\A</code></td>
+<td>字符串开头(类似^，但不受处理多行选项的影响)</td>
+</tr>
+<tr>
+<td><code>\Z</code></td>
+<td>字符串结尾或行尾(不受处理多行选项的影响)</td>
+</tr>
+<tr>
+<td><code>\z</code></td>
+<td>字符串结尾(类似$，但不受处理多行选项的影响)</td>
+</tr>
+<tr>
+<td><code>\G</code></td>
+<td>当前搜索的开头</td>
+</tr>
+<tr>
+<td><code>\p{name}</code></td>
+<td IsGreek>Unicode中命名为name的字符类，例如\p</td>
+</tr>
+<tr>
+<td><code>(?&gt;exp)</code></td>
+<td>贪婪子表达式</td>
+</tr>
+<tr>
+<td><code>(?&lt;x&gt;&lt;y&gt;exp)</code></td>
+<td>平衡组</td>
+</tr>
+<tr>
+<td><code>(?im-nsx:exp)</code></td>
+<td>在子表达式exp中改变处理选项</td>
+</tr>
+<tr>
+<td><code>(?im-nsx)</code></td>
+<td>为表达式后面的部分改变处理选项</td>
+</tr>
+<tr>
+<td><code>(?(exp)yes|no)</code></td>
+<td>把exp当作零宽正向先行断言，如果在这个位置能匹配，使用yes作为此组的表达式；否则使用no</td>
+</tr>
+<tr>
+<td><code>(?(exp)yes)</code></td>
+<td>同上，只是使用空表达式作为no</td>
+</tr>
+<tr>
+<td><code>(?(name)yes|no)</code></td>
+<td>如果命名为name的组捕获到了内容，使用yes作为表达式；否则使用no</td>
+</tr>
+<tr>
+<td><code>(?(name)yes)</code></td>
+<td>同上，只是使用空表达式作为no</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>链接</h2>
+<ul>
+<li><a href="https://item.jd.com/11070361.html">精通正则表达式(第3版)</a></li>
+<li><a href="https://msdn.microsoft.com/zh-cn/library/hs600312.aspx">微软的正则表达式教程</a></li>
+<li><a href="http://msdn2.microsoft.com/zh-cn/library/system.text.regularexpressions.regex.aspx">System.Text.RegularExpressions.Regex类(MSDN)</a></li>
+<li><a href="http://www.regular-expressions.info/">专业的正则表达式教学网站(英文)</a></li>
+<li><a href="http://weblogs.asp.net/whaggard/archive/2005/02/20/377025.aspx">关于.Net下的平衡组的详细讨论（英文）</a></li>
+</ul>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="https://XYZ-99.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://XYZ-99.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://XYZ-99.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Proudly Presented by XYZ.
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

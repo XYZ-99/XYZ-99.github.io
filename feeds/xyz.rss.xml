@@ -1,3 +1,483 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>XYZ - XYZ</title><link>https://XYZ-99.github.io/</link><description>So desperate to learn.</description><lastBuildDate>Wed, 31 Jul 2019 11:10:00 +0800</lastBuildDate><item><title>My First Post</title><link>https://XYZ-99.github.io/My-First-Post.html</link><description>&lt;h2&gt;My First Post&lt;/h2&gt;
-&lt;p&gt;Established on July 31st.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">XYZ</dc:creator><pubDate>Wed, 31 Jul 2019 11:10:00 +0800</pubDate><guid isPermaLink="false">tag:xyz-99.github.io,2019-07-31:/My-First-Post.html</guid></item></channel></rss>
+<rss version="2.0"><channel><title>XYZ - XYZ</title><link>https://XYZ-99.github.io/</link><description>So desperate to learn.</description><lastBuildDate>Sat, 04 Aug 2018 12:06:00 +0800</lastBuildDate><item><title>Regular Expression Notes</title><link>https://XYZ-99.github.io/regex.html</link><description>&lt;h2&gt;元字符&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&amp;nbsp;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;.&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配除换行符以外的任意字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\w&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配字母或数字或下划线或汉字&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\s&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配任意的空白符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\d&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配数字&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\b&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配单词的开始或结束&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;^&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配字符串的开始&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;$&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配字符串的结束&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class="math"&gt;$$
+f(x)=x^2
+$$&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2&gt;重复匹配&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&amp;nbsp;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\d{2}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配两次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\d{1,3}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配1到3次，&lt;strong&gt;闭区间&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\d{2,}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配2次或更多&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\d*&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配0次或更多次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\d+&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配1次或更多次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\d?&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配0或1次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2&gt;字符转义&lt;/h2&gt;
+&lt;p&gt;想要查找上述元字符本身（比如查找&lt;code&gt;.&lt;/code&gt;），即可用&lt;code&gt;\.&lt;/code&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;字符集合&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&amp;nbsp;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;[aeiou]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配其中任意&lt;u&gt;&lt;strong&gt;一个&lt;/strong&gt;&lt;/u&gt;字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;[.?!]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;（自行领会）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;[0-9]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;（自行领会）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;[a-z0-9A-Z]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;（自行领会）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2&gt;分支条件&lt;/h2&gt;
+&lt;p&gt;使用 &lt;code&gt;|&lt;/code&gt; 来进行分支条件，与「或」的意思很像。
+&lt;strong&gt;但需要注意的是&lt;/strong&gt;，因为和「或」一样，匹配完前一个符合之后就不再匹配后一个了。也就是说，需要&lt;u&gt;&lt;strong&gt;注意顺序&lt;/strong&gt;&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;例如，如果要匹配美国的邮政编码（5位数字，或5位数字-4位数字），必须写成：
+&lt;code&gt;\d{5}-\d{4}|\d{5}&lt;/code&gt;
+不能交换顺序。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;分组&lt;/h2&gt;
+&lt;p&gt;将一个单位重复好几次时，就可以用分组，比如匹配一个形如 &lt;code&gt;168.105.86.10&lt;/code&gt; 的 IP 地址：
+&lt;code&gt;(\d{1,3}\.){3}\d{1,3}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;但是 IP 地址中每个数字都不能大于 255，所以还是要用更复杂的分组表达式进行匹配：  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;((25[0-5]|2[0-4]\d|[01]?\d\d?).){3}25[0-5]|2[0-4]\d|[01]?\d\d?
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;注意一下这里匹配 200 以下数字的方法（因为可能是三位数，两位数和一位数，但百位有要求&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;反义&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&amp;nbsp;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\W&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配除了字母或数字或下划线或汉字的字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\S&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配任意非空白符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\D&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配非数字&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\B&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配非单词的开始或结束&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;[^x]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配除了 &lt;code&gt;x&lt;/code&gt; 以外的字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;[^aeiou]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配除了 &lt;code&gt;aeiou&lt;/code&gt; 以外的字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;例子：  &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;\S+&lt;/code&gt; 匹配不包含空白符的字符串；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;a[^&amp;gt;]+&amp;gt;&lt;/code&gt; 就可以匹配形如 &lt;code&gt;&amp;lt;aeiou&amp;gt;&lt;/code&gt; 的字符串。&lt;u&gt;&lt;strong&gt;以后匹配的时候要注意这个！&lt;/strong&gt;&lt;/u&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2&gt;后向引用&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用小括号指定一个子表达式后，匹配这个子表达式的文本(也就是此分组捕获的内容)可以在表达式或其它程序中作进一步的处理。默认情况下，每个分组会自动拥有一个组号，规则是：&lt;strong&gt;从左向右&lt;/strong&gt;，以分组的&lt;strong&gt;左括号&lt;/strong&gt;为标志，第一个出现的分组的组号为1，第二个为2，以此类推。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;用 &lt;code&gt;\1&lt;/code&gt; 来表示第一组分组文本：&lt;code&gt;\b(\w+)\b\s\1\b&lt;/code&gt; 可以匹配 &lt;code&gt;my my&lt;/code&gt; 这种字符串。&lt;/p&gt;
+&lt;p&gt;当然也可以自定义组名，用 &lt;code&gt;(?&amp;lt;Word&amp;gt;\w+)&lt;/code&gt; 或 &lt;code&gt;(?'Word'\w+)&lt;/code&gt; 的语法，之后用 &lt;code&gt;\k&amp;lt;Word&amp;gt;&lt;/code&gt; 来指代。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其实组号的分配要从左至右扫描两遍，第一遍只给&lt;strong&gt;未命名&lt;/strong&gt;组分配组号，第二遍只给&lt;strong&gt;已命名组&lt;/strong&gt;分配组号，因此所有已命名组的组号都大于未命名组的组号。  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;顺便看一下常用分组语法：  &lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;分类&lt;/th&gt;
+&lt;th&gt;表达式&lt;/th&gt;
+&lt;th&gt;匹配&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;捕获&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;exp&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;通常&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;捕获&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;(?&amp;lt;name&amp;gt;exp)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;命名&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;捕获&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;(?:exp)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;不分配组名&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;零宽断言&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;(?=exp)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配 &lt;code&gt;exp&lt;/code&gt; 前面的文本&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;零宽断言&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;(?&amp;lt;=exp)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配 &lt;code&gt;exp&lt;/code&gt; 后面的文本&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;零宽断言&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;(?!exp)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配后面不是 &lt;code&gt;exp&lt;/code&gt; 的文本&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;零宽断言&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;(?&amp;lt;!exp)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配前面不是&lt;code&gt;exp&lt;/code&gt;的文本&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;注释&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;(?#comment)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;注释&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2&gt;零宽断言&lt;/h2&gt;
+&lt;p&gt;语法见上。附上两个名词：&lt;strong&gt;零宽度正预测先行断言、零宽度正回顾后发断言&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;例1：&lt;code&gt;\b\w+(?=ing\b)&lt;/code&gt; 匹配以 ing 结尾的单词。&lt;br&gt;
+例2：&lt;code&gt;\b(?&amp;lt;=\bre)\w+\b&lt;/code&gt; 匹配任何以 re 开头的单词。&lt;br&gt;
+例3：&lt;code&gt;((?&amp;lt;=\d)\d{3})+\b&lt;/code&gt; 查找为任意一个数字添加三位分隔符的位置。&lt;br&gt;
+例4：&lt;code&gt;(?&amp;lt;=\s)\d+(?=\s)&lt;/code&gt; 匹配以空格间隔的数字。→ 如果变成 &lt;code&gt;\s\d+\s&lt;/code&gt;会怎么样？  &lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;负向零宽断言&lt;/h2&gt;
+&lt;p&gt;语法见上表。&lt;/p&gt;
+&lt;p&gt;例1：&lt;code&gt;\b\w*q(?!u)\w*\b&lt;/code&gt; 匹配含 &lt;code&gt;q&lt;/code&gt; 且 &lt;code&gt;q&lt;/code&gt; 后面不是 &lt;code&gt;u&lt;/code&gt; 的单词。&lt;br&gt;
+例2：&lt;code&gt;\b((?!abc)\w)+\b&lt;/code&gt; 匹配不包含 &lt;code&gt;abc&lt;/code&gt; 的单词。&lt;br&gt;
+例3：&lt;code&gt;(?&amp;lt;![a-z])\d{7}&lt;/code&gt; 匹配前面非小写字母的 7 位数字。&lt;br&gt;
+例4：&lt;code&gt;(?&amp;lt;=&amp;lt;(\w+)&amp;gt;).*(?=&amp;lt;\/\1&amp;gt;)&lt;/code&gt; 匹配例如 &lt;code&gt;&amp;lt;u&amp;gt;&lt;/code&gt; 和 &lt;code&gt;&amp;lt;/u&amp;gt;&lt;/code&gt; 之间的内容（&lt;strong&gt;不包含&lt;/strong&gt;）。  &lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;注释&lt;/h2&gt;
+&lt;p&gt;上面提到了使用 &lt;code&gt;(?#comment)&lt;/code&gt; 可以添加注释。如果当启用了忽略表达式中的空格与 &lt;code&gt;tab&lt;/code&gt; 键后，一行中 &lt;code&gt;#&lt;/code&gt; 后面的文字都将被当作注释。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;(?&amp;lt;=    # 断言要匹配的文本的前缀
+&amp;lt;(\w+)&amp;gt; # 查找尖括号括起来的字母或数字(即HTML/XML标签)
+)       # 前缀结束
+.*      # 匹配任意文本
+(?=     # 断言要匹配的文本的后缀
+&amp;lt;\/\1&amp;gt;  # 查找尖括号括起来的内容：前面是一个&amp;quot;/&amp;quot;，后面是先前捕获的标签
+)       # 后缀结束
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr&gt;
+&lt;h2&gt;贪婪与懒惰&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;贪婪匹配：&lt;/strong&gt;相同情况下，正则表达式会匹配到满足条件的最大字符串。&lt;br&gt;
+这时我们需要懒惰匹配，只需在对应位置加上 &lt;code&gt;?&lt;/code&gt; ：&lt;br&gt;
+&lt;code&gt;a.*b&lt;/code&gt; → &lt;code&gt;a.*?b&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;支持以下语法：  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;*?&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;+?&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;??&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;{m,n}?&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;{n,}?&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;重复固定次数的就用不着了。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;平衡组与递归匹配&lt;/h2&gt;
+&lt;p&gt;如何把 &lt;code&gt;xx &amp;lt;aa &amp;lt;bbb&amp;gt; &amp;lt;bbb&amp;gt; aa&amp;gt; yy&lt;/code&gt; 中最长的对应的尖括号匹配出来？&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;                         #最外层的左括号
+    [^&amp;lt;&amp;gt;]*                #最外层的左括号后面的不是括号的内容
+    (
+        (
+            (?&amp;#39;Open&amp;#39;&amp;lt;)    #碰到了左括号，在黑板上写一个&amp;quot;Open&amp;quot;
+            [^&amp;lt;&amp;gt;]*       #匹配左括号后面的不是括号的内容
+        )+
+        (
+            (?&amp;#39;-Open&amp;#39;&amp;gt;)   #碰到了右括号，擦掉一个&amp;quot;Open&amp;quot;
+            [^&amp;lt;&amp;gt;]*        #匹配右括号后面不是括号的内容
+        )+
+    )*
+    (?(Open)(?!))         #在遇到最外层的右括号前面，判断黑板上还有没有没擦掉的&amp;quot;Open&amp;quot;；如果还有，则匹配失败
+
+&amp;gt;                         #最外层的右括号
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;(?'group')&lt;/code&gt; 把捕获的内容命名为 &lt;code&gt;group&lt;/code&gt;，并压入堆栈(Stack)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;(?'-group')&lt;/code&gt; 从堆栈上弹出最后压入堆栈的名为 &lt;code&gt;group&lt;/code&gt; 的捕获内容，如果堆栈本来为空，则本分组的匹配失败&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;(?(group)yes|no)&lt;/code&gt; 如果堆栈上存在以名为 &lt;code&gt;group&lt;/code&gt; 的捕获内容的话，继续匹配 &lt;code&gt;yes&lt;/code&gt; 部分的表达式，否则继续匹配 &lt;code&gt;no&lt;/code&gt; 部分&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;(?!)&lt;/code&gt; 零宽负向先行断言，由于没有后缀表达式，试图匹配总是失败&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;其他&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&amp;nbsp;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\a&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;报警字符(打印它的效果是电脑嘀一声)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\b&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;通常是单词分界位置，但如果在字符类里使用代表退格&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\t&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;制表符，Tab&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\r&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;回车&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\v&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;竖向制表符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\f&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;换页符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\n&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;换行符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\e&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Escape&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\0nn&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;ASCII代码中八进制代码为nn的字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\xnn&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;ASCII代码中十六进制代码为nn的字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\unnnn&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Unicode代码中十六进制代码为nnnn的字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\cN&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;ASCII控制字符。比如\cC代表Ctrl+C&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\A&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;字符串开头(类似^，但不受处理多行选项的影响)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\Z&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;字符串结尾或行尾(不受处理多行选项的影响)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\z&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;字符串结尾(类似$，但不受处理多行选项的影响)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\G&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;当前搜索的开头&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\p{name}&lt;/code&gt;&lt;/td&gt;
+&lt;td IsGreek&gt;Unicode中命名为name的字符类，例如\p&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;(?&amp;gt;exp)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;贪婪子表达式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;(?&amp;lt;x&amp;gt;&amp;lt;y&amp;gt;exp)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;平衡组&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;(?im-nsx:exp)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;在子表达式exp中改变处理选项&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;(?im-nsx)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;为表达式后面的部分改变处理选项&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;(?(exp)yes|no)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;把exp当作零宽正向先行断言，如果在这个位置能匹配，使用yes作为此组的表达式；否则使用no&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;(?(exp)yes)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;同上，只是使用空表达式作为no&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;(?(name)yes|no)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;如果命名为name的组捕获到了内容，使用yes作为表达式；否则使用no&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;(?(name)yes)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;同上，只是使用空表达式作为no&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2&gt;链接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://item.jd.com/11070361.html"&gt;精通正则表达式(第3版)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://msdn.microsoft.com/zh-cn/library/hs600312.aspx"&gt;微软的正则表达式教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://msdn2.microsoft.com/zh-cn/library/system.text.regularexpressions.regex.aspx"&gt;System.Text.RegularExpressions.Regex类(MSDN)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.regular-expressions.info/"&gt;专业的正则表达式教学网站(英文)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://weblogs.asp.net/whaggard/archive/2005/02/20/377025.aspx"&gt;关于.Net下的平衡组的详细讨论（英文）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">XYZ</dc:creator><pubDate>Sat, 04 Aug 2018 12:06:00 +0800</pubDate><guid isPermaLink="false">tag:xyz-99.github.io,2018-08-04:/regex.html</guid><category>RegEx</category></item></channel></rss>
