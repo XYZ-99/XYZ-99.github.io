@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>XYZ</title><link href="https://XYZ-99.github.io/" rel="alternate"></link><link href="https://XYZ-99.github.io/feeds/all.atom.xml" rel="self"></link><id>https://XYZ-99.github.io/</id><updated>2018-08-04T12:06:00+08:00</updated><subtitle>So desperate to learn.</subtitle><entry><title>Regular Expression Notes</title><link href="https://XYZ-99.github.io/regex.html" rel="alternate"></link><published>2018-08-04T12:06:00+08:00</published><updated>2018-08-04T12:06:00+08:00</updated><author><name>XYZ</name></author><id>tag:xyz-99.github.io,2018-08-04:/regex.html</id><summary type="html">&lt;p&gt;Might be of some use for those who want to learn RegEx.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;元字符&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>XYZ</title><link href="https://XYZ-99.github.io/" rel="alternate"></link><link href="https://XYZ-99.github.io/feeds/all.atom.xml" rel="self"></link><id>https://XYZ-99.github.io/</id><updated>2018-08-04T12:06:00+08:00</updated><subtitle>So desperate to learn.</subtitle><entry><title>Regular Expression Notes</title><link href="https://XYZ-99.github.io/regex.html" rel="alternate"></link><published>2018-08-04T12:06:00+08:00</published><updated>2018-08-04T12:06:00+08:00</updated><author><name>XYZ</name></author><id>tag:xyz-99.github.io,2018-08-04:/regex.html</id><summary type="html">&lt;p&gt;Might be of some use for those who want to learn RegEx.&lt;/p&gt;</summary><content type="html">&lt;p&gt;这个是对于&lt;a href="https://deerchao.cn/tutorials/regex/regex.htm"&gt;这个网站&lt;/a&gt;的总结记录。&lt;/p&gt;
+&lt;p&gt;在线测试正则表达式，可以在&lt;a href="https://regex101.com/"&gt;这里&lt;/a&gt;进行。  &lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;元字符&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -38,9 +41,6 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;div class="math"&gt;$$
-f(x)=x^2
-$$&lt;/div&gt;
 &lt;hr&gt;
 &lt;h2&gt;重复匹配&lt;/h2&gt;
 &lt;table&gt;
@@ -418,66 +418,4 @@ $$&lt;/div&gt;
 &lt;li&gt;&lt;a href="http://msdn2.microsoft.com/zh-cn/library/system.text.regularexpressions.regex.aspx"&gt;System.Text.RegularExpressions.Regex类(MSDN)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.regular-expressions.info/"&gt;专业的正则表达式教学网站(英文)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://weblogs.asp.net/whaggard/archive/2005/02/20/377025.aspx"&gt;关于.Net下的平衡组的详细讨论（英文）&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width &lt; 768) ? "left" : align;
-        indent = (screen.width &lt; 768) ? "0em" : indent;
-        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-
-    var configscript = document.createElement('script');
-    configscript.type = 'text/x-mathjax-config';
-    configscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        availableFonts: ['STIX', 'TeX']," +
-        "        preferredFont: 'STIX'," +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-&lt;/script&gt;</content><category term="RegEx"></category></entry></feed>
+&lt;/ul&gt;</content><category term="RegEx"></category></entry></feed>
